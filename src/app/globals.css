@@ -3,25 +3,51 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-text: #141414;
+  --color-error: #BF2012;
+  --color-warning: #FFA000;
+  --color-success: #1A6C31;
+  --color-paper: #FFF;
+  --color-primary: #202A44;
+  --color-secondary: #1F78D1;
+  --color-background: #F7F6F3;
+  --color-primary-contrast: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  @apply outline-primary outline-1 -outline-offset-2
 }
 
+html,
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow: overlay;
+  @apply bg-background text-text w-screen h-screen underline-offset-4
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+a {
+  @apply hover:underline active:opacity-50 transition-opacity
+}
+
+.overflow-primary::-webkit-scrollbar-thumb {
+  @apply bg-primary;
+}
+
+*::-webkit-scrollbar {
+  @apply h-3 w-2;
+}
+
+*::-webkit-scrollbar-button {
+  @apply hidden;
+}
+
+*::-webkit-scrollbar-corner {
+  @apply bg-transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-secondary;
+}
+
+*::-webkit-scrollbar-track {
+  @apply bg-transparent;
 }
