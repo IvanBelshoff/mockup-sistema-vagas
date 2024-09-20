@@ -1,7 +1,5 @@
-import { IVaga } from '@/app/(default)/page'
-import Link from 'next/link'
-import React from 'react'
-import { FaArrowLeft } from 'react-icons/fa6'
+import { IVaga } from '@/app/(default)/page';
+import React from 'react';
 
 interface IDetailJob {
     vaga: IVaga
@@ -54,8 +52,6 @@ export const DetailJob: React.FC<IDetailJob> = ({ vaga }) => {
 
             </div>
 
-
-
         </div>
-    )
-}
+    );
+};

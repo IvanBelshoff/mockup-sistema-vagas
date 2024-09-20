@@ -1,6 +1,6 @@
 
 import { Metadata } from 'next';
-import React from 'react'
+import React from 'react';
 import { IVaga } from '../../page';
 import { CardJob, DetailJob } from '@/components/vagas';
 import Image from "next/image";
@@ -87,5 +87,5 @@ export default function pageCourseDetail({ params }: Props) {
         </>
 
 
-    )
+    );
 }
